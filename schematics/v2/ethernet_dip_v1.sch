@@ -11087,7 +11087,6 @@ Jan Kandziora &amp;lt;jjj@gmx.de&amp;gt;</description>
 <part name="C7" library="rcl" deviceset="C-EU" device="C0805"/>
 <part name="C8" library="rcl" deviceset="C-EU" device="C0805"/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="PAD1" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254"/>
 <part name="PAD3" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254"/>
 <part name="R4" library="rcl" deviceset="R-EU_" device="R0805"/>
 <part name="R5" library="rcl" deviceset="R-EU_" device="R0805"/>
@@ -11167,8 +11166,9 @@ avoid using the Atmega pins</text>
 <instance part="C7" gate="G$1" x="36.83" y="165.1" rot="R180"/>
 <instance part="C8" gate="G$1" x="41.91" y="165.1" rot="R180"/>
 <instance part="GND3" gate="1" x="241.3" y="139.7"/>
-<instance part="PAD1" gate="G$1" x="116.84" y="172.72" rot="R180"/>
-<instance part="PAD3" gate="G$1" x="116.84" y="170.18" rot="R180"/>
+<instance part="PAD3" gate="G$1" x="132.08" y="170.18" smashed="yes" rot="R180">
+<attribute name="NAME" x="133.223" y="168.3258" size="1.778" layer="95" rot="R180"/>
+</instance>
 <instance part="R4" gate="G$1" x="125.73" y="138.43" rot="R180"/>
 <instance part="R5" gate="G$1" x="125.73" y="134.62" rot="R180"/>
 <instance part="R6" gate="G$1" x="125.73" y="107.95" rot="R180"/>
@@ -11451,6 +11451,11 @@ avoid using the Atmega pins</text>
 <pinref part="SV3" gate="G$1" pin="6"/>
 <wire x1="386.08" y1="180.34" x2="393.7" y2="180.34" width="0.1524" layer="91"/>
 <label x="388.62" y="180.34" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="/INT"/>
+<wire x1="109.22" y1="172.72" x2="129.54" y2="172.72" width="0.1524" layer="91"/>
+<label x="119.38" y="172.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D3" class="0">
@@ -12033,18 +12038,11 @@ avoid using the Atmega pins</text>
 <wire x1="231.14" y1="144.78" x2="231.14" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="/INT"/>
-<pinref part="PAD1" gate="G$1" pin="P"/>
-<wire x1="114.3" y1="172.72" x2="109.22" y2="172.72" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$13" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="CLKOUT"/>
 <pinref part="PAD3" gate="G$1" pin="P"/>
-<wire x1="114.3" y1="170.18" x2="109.22" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="129.54" y1="170.18" x2="109.22" y2="170.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$14" class="0">
