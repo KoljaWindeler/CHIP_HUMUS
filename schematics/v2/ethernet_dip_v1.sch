@@ -286,9 +286,7 @@ W = angled&lt;p&gt;
 <pad name="35" x="21.59" y="1.27" drill="0.9144" shape="octagon"/>
 <pad name="36" x="21.59" y="-1.27" drill="0.9144" shape="octagon"/>
 <text x="-16.51" y="3.429" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-21.971" y="3.429" size="1.27" layer="21" ratio="10">1</text>
 <text x="-22.86" y="-4.699" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<text x="20.701" y="-4.699" size="1.27" layer="21" ratio="10">36</text>
 </package>
 </packages>
 <symbols>
@@ -10966,6 +10964,91 @@ Please send any comments to: &lt;a href="mailto:messi@users.sourceforge.net"&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="1wire">
+<description>&lt;h1&gt;Dallas/Maxim 1-Wire/iButton devices&lt;/h1&gt;
+&lt;p&gt;Onewire is a simple, low-cost bus system working with hundreds of devices on an up to 300m long one-wire (plus GND) bus system. It is relative slow (~16kBaud) but electrically undemanding, too. The onewire is hotplug-capable, if the host software supports it. The bus can be controlled by a single &amp;mu;C port pin or by special host adapter chips, which are available for RS232, Parallel, I&lt;sup&gt;2&lt;/sup&gt;C, and USB to onewire conversion. They are available as ready-to-run host adapter devices, too.&lt;/p&gt;
+&lt;p&gt;The chips on the bus can be powered through the bus line, this is called "parasite power". All neccesary circuit and capacities for parasite power are on chip. Some chips need an additional power source to provide all features.&lt;/p&gt;
+&lt;p&gt;iButton is an application for onewire devices, using special packaged onewire devices as keys or for data storage. All onewire chips have a unique serial number for technical reasons, and together with the hot-plug capability this makes them useable as unique keys. In addition, many onewire chips have additional memory (EPROM, EEPROM, RAM) on the chip, which can be used to store cryptographic keys. iButtons come in various packages which are protected against corrosive agents and weather influences.&lt;/p&gt;
+&lt;p&gt;Get more info at &lt;tt&gt;http://www.maxim-ic.com/1-Wire.cfm&lt;/tt&gt;&lt;/p&gt;
+&lt;p&gt;Linux driver at &lt;tt&gt;http://owfs.sf.net&lt;/tt&gt;&lt;/p&gt;
+&lt;h3&gt;Copyright notice:&lt;/h3&gt;
+&lt;p&gt;The devices in this library are copyrighted by various authors &amp;mdash; permission to use, distribute and modify this library is given to you at the terms of the LGPL. Copyright holders are&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Jan Kandziora &amp;lt;jjj@gmx.de&amp;gt;&lt;/li&gt;
+&lt;li&gt;Giovanni Varasano &amp;lt;giovanni.varasano@fastwebnet.it&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The authorship for each device is given in the device notes.&lt;/p&gt;</description>
+<packages>
+<package name="TSOC6">
+<description>&lt;b&gt;TSOC 6&lt;/b&gt;</description>
+<wire x1="-1.8542" y1="1.8034" x2="1.8542" y2="1.8034" width="0.254" layer="21"/>
+<wire x1="1.8542" y1="1.8034" x2="1.8542" y2="-1.8034" width="0.254" layer="21"/>
+<wire x1="1.8542" y1="-1.8034" x2="-1.8542" y2="-1.8034" width="0.254" layer="21"/>
+<wire x1="-1.8542" y1="-1.8034" x2="-1.8542" y2="1.8034" width="0.254" layer="21"/>
+<circle x="-1.143" y="-1.016" radius="0.254" width="0.1524" layer="21"/>
+<smd name="1" x="-1.27" y="-1.6002" dx="0.4064" dy="1.2192" layer="1"/>
+<smd name="2" x="0" y="-1.6002" dx="0.4064" dy="1.2192" layer="1"/>
+<smd name="3" x="1.27" y="-1.6002" dx="0.4064" dy="1.2192" layer="1"/>
+<smd name="4" x="1.27" y="1.6002" dx="0.4064" dy="1.2192" layer="1"/>
+<smd name="5" x="0" y="1.6002" dx="0.4064" dy="1.2192" layer="1"/>
+<smd name="6" x="-1.27" y="1.6002" dx="0.4064" dy="1.2192" layer="1"/>
+<text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.3716" y1="-2.0828" x2="-1.1684" y2="-1.0668" layer="51"/>
+<rectangle x1="-0.1016" y1="-2.0828" x2="0.1016" y2="-1.0668" layer="51"/>
+<rectangle x1="1.1684" y1="-2.0828" x2="1.3716" y2="-1.0668" layer="51"/>
+<rectangle x1="1.1684" y1="1.0668" x2="1.3716" y2="2.0828" layer="51"/>
+<rectangle x1="-0.1016" y1="1.0668" x2="0.1016" y2="2.0828" layer="51"/>
+<rectangle x1="-1.3716" y1="1.0668" x2="-1.1684" y2="2.0828" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="IC">
+<wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<text x="5.715" y="0.635" size="1.778" layer="95">&gt;NAME</text>
+<text x="5.715" y="-1.905" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-2.54" y="-1.905" size="3.81" layer="94" ratio="15">IC</text>
+</symbol>
+<symbol name="1W">
+<text x="-8.89" y="1.905" size="1.778" layer="95" font="vector">&gt;NAME</text>
+<pin name="1W" x="-5.08" y="0" visible="pad" length="middle" direction="pwr"/>
+</symbol>
+<symbol name="GND">
+<text x="-0.635" y="-0.635" size="1.778" layer="95" font="vector">&gt;NAME</text>
+<text x="1.905" y="-2.54" size="1.27" layer="95" font="vector" rot="MR270">GND</text>
+<pin name="GND" x="0" y="-7.62" visible="pad" length="middle" direction="pwr" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DS2432" prefix="IC">
+<description>&lt;h2&gt;1024-Bit Protected EEPROM with SHA-1 Engine&lt;/h2&gt;
+&lt;p&gt;This chip is a cryptographic device, providing 1024 Bits of EEPROM memory which may be written only after supplying the correct 64 bit secret. the secret cannot be read back from the device.&lt;/p&gt;
+&lt;p&gt;The other features of this chip are like the DS2431.&lt;/p&gt;
+&lt;p&gt;Please note the SHA-1 hash algorithm is considered weak if the data is not properly "padded". If you don't understand anything of this, don't use this chip.&lt;/p&gt;
+&lt;h3&gt;Author:&lt;/h3&gt;
+Jan Kandziora &amp;lt;jjj@gmx.de&amp;gt;</description>
+<gates>
+<gate name="G$1" symbol="IC" x="0" y="0" addlevel="always"/>
+<gate name="_1W" symbol="1W" x="-5.08" y="0" addlevel="request"/>
+<gate name="P" symbol="GND" x="0" y="0" addlevel="request"/>
+</gates>
+<devices>
+<device name="P" package="TSOC6">
+<connects>
+<connect gate="P" pin="GND" pad="4"/>
+<connect gate="_1W" pin="1W" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -11021,6 +11104,10 @@ Please send any comments to: &lt;a href="mailto:messi@users.sourceforge.net"&gt;
 <part name="R9" library="rcl" deviceset="R-EU_" device="R0805"/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
 <part name="SUPPLY6" library="SparkFun-Aesthetics" deviceset="VDD" device="" value="+3.3v"/>
+<part name="IC2" library="1wire" deviceset="DS2432" device="P"/>
+<part name="GND14" library="supply1" deviceset="GND" device=""/>
+<part name="R10" library="rcl" deviceset="R-EU_" device="R0805"/>
+<part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="VDD" device="" value="+3.3v"/>
 </parts>
 <sheets>
 <sheet>
@@ -11097,6 +11184,12 @@ avoid using the Atmega pins</text>
 <instance part="R9" gate="G$1" x="127" y="203.2" rot="R180"/>
 <instance part="GND11" gate="1" x="247.65" y="209.55"/>
 <instance part="SUPPLY6" gate="VDD" x="279.4" y="215.9"/>
+<instance part="IC2" gate="G$1" x="304.8" y="127"/>
+<instance part="IC2" gate="P" x="312.42" y="116.84" rot="R270"/>
+<instance part="IC2" gate="_1W" x="309.88" y="119.38"/>
+<instance part="GND14" gate="1" x="302.26" y="111.76"/>
+<instance part="R10" gate="G$1" x="289.56" y="127" rot="R90"/>
+<instance part="SUPPLY7" gate="VDD" x="289.56" y="134.62"/>
 </instances>
 <busses>
 </busses>
@@ -11230,6 +11323,12 @@ avoid using the Atmega pins</text>
 <pinref part="RJ1" gate="G$1" pin="Y-"/>
 <wire x1="247.65" y1="213.36" x2="241.3" y2="213.36" width="0.1524" layer="91"/>
 <wire x1="241.3" y1="213.36" x2="241.3" y2="205.74" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="P" pin="GND"/>
+<pinref part="GND14" gate="1" pin="GND"/>
+<wire x1="304.8" y1="116.84" x2="302.26" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="116.84" x2="302.26" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="INT0" class="0">
@@ -11498,6 +11597,15 @@ avoid using the Atmega pins</text>
 <pinref part="SV2" gate="G$1" pin="19"/>
 <wire x1="299.72" y1="198.12" x2="287.02" y2="198.12" width="0.1524" layer="91"/>
 <label x="289.56" y="198.12" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="IC2" gate="_1W" pin="1W"/>
+<label x="294.64" y="119.38" size="1.778" layer="95"/>
+<wire x1="304.8" y1="119.38" x2="289.56" y2="119.38" width="0.1524" layer="91"/>
+<pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="289.56" y1="119.38" x2="284.48" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="121.92" x2="289.56" y2="119.38" width="0.1524" layer="91"/>
+<junction x="289.56" y="119.38"/>
 </segment>
 </net>
 <net name="LD4" class="0">
@@ -11864,6 +11972,11 @@ avoid using the Atmega pins</text>
 <label x="289.56" y="213.36" size="1.778" layer="95"/>
 <pinref part="SUPPLY6" gate="VDD" pin="VDD"/>
 <wire x1="279.4" y1="213.36" x2="279.4" y2="215.9" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R10" gate="G$1" pin="2"/>
+<wire x1="289.56" y1="134.62" x2="289.56" y2="132.08" width="0.1524" layer="91"/>
+<pinref part="SUPPLY7" gate="VDD" pin="VDD"/>
 </segment>
 </net>
 <net name="N$2" class="0">
