@@ -11049,6 +11049,48 @@ Jan Kandziora &amp;lt;jjj@gmx.de&amp;gt;</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="power_supply">
+<packages>
+<package name="MP1584EN_FRAMELESS">
+<pad name="VIN" x="1.778" y="1.778" drill="0.8" shape="long"/>
+<pad name="GNDIN" x="1.778" y="14.986" drill="0.8" shape="long"/>
+<pad name="GNDOUT" x="20.32" y="14.986" drill="0.8" shape="long"/>
+<pad name="VOUT" x="20.32" y="1.778" drill="0.8" shape="long"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MP1584EN">
+<wire x1="0" y1="0" x2="0" y2="12.7" width="0.254" layer="94"/>
+<wire x1="0" y1="12.7" x2="25.4" y2="12.7" width="0.254" layer="94"/>
+<wire x1="25.4" y1="12.7" x2="25.4" y2="0" width="0.254" layer="94"/>
+<wire x1="25.4" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="VIN" x="2.54" y="-5.08" length="middle" direction="pwr" rot="R90"/>
+<pin name="GNDIN" x="5.08" y="-5.08" length="middle" direction="pwr" rot="R90"/>
+<pin name="VOUT" x="20.32" y="-5.08" length="middle" direction="pwr" rot="R90"/>
+<pin name="GNDOUT" x="22.86" y="-5.08" length="middle" direction="pwr" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MP1584EN_FRAMELESS">
+<gates>
+<gate name="G$1" symbol="MP1584EN" x="-12.7" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="MP1584EN_FRAMELESS">
+<connects>
+<connect gate="G$1" pin="GNDIN" pad="GNDIN"/>
+<connect gate="G$1" pin="GNDOUT" pad="GNDOUT"/>
+<connect gate="G$1" pin="VIN" pad="VIN"/>
+<connect gate="G$1" pin="VOUT" pad="VOUT"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -11107,6 +11149,12 @@ Jan Kandziora &amp;lt;jjj@gmx.de&amp;gt;</description>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="R10" library="rcl" deviceset="R-EU_" device="R0805"/>
 <part name="SUPPLY7" library="SparkFun-Aesthetics" deviceset="VDD" device="" value="+3.3v"/>
+<part name="VIN" library="wirepad" deviceset="WIREPAD" device="3,17/1,3"/>
+<part name="GND" library="wirepad" deviceset="WIREPAD" device="3,17/1,3"/>
+<part name="U$9" library="power_supply" deviceset="MP1584EN_FRAMELESS" device=""/>
+<part name="GND4" library="supply1" deviceset="GND" device=""/>
+<part name="GND12" library="supply1" deviceset="GND" device=""/>
+<part name="GND13" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11135,6 +11183,11 @@ avoid using the Atmega pins</text>
 <text x="401.32" y="185.42" size="1.778" layer="91">SPI2_CLK</text>
 <text x="347.98" y="182.88" size="1.778" layer="91">SPI2_MOSI</text>
 <text x="401.32" y="182.88" size="1.778" layer="91">SPI2_MISO</text>
+<wire x1="411.48" y1="106.68" x2="327.66" y2="106.68" width="2.54" layer="103"/>
+<wire x1="327.66" y1="106.68" x2="327.66" y2="53.34" width="2.54" layer="103"/>
+<wire x1="327.66" y1="53.34" x2="411.48" y2="53.34" width="2.54" layer="103"/>
+<wire x1="411.48" y1="53.34" x2="411.48" y2="106.68" width="2.54" layer="103"/>
+<text x="330.2" y="96.52" size="5.08" layer="103">Power</text>
 </plain>
 <instances>
 <instance part="SV2" gate="G$1" x="307.34" y="198.12"/>
@@ -11190,6 +11243,12 @@ avoid using the Atmega pins</text>
 <instance part="GND14" gate="1" x="302.26" y="111.76"/>
 <instance part="R10" gate="G$1" x="289.56" y="127" rot="R90"/>
 <instance part="SUPPLY7" gate="VDD" x="289.56" y="134.62"/>
+<instance part="VIN" gate="G$1" x="335.28" y="83.82"/>
+<instance part="GND" gate="G$1" x="335.28" y="76.2"/>
+<instance part="U$9" gate="G$1" x="368.3" y="78.74"/>
+<instance part="GND4" gate="1" x="340.36" y="68.58"/>
+<instance part="GND12" gate="1" x="375.92" y="66.04"/>
+<instance part="GND13" gate="1" x="393.7" y="66.04"/>
 </instances>
 <busses>
 </busses>
@@ -11330,12 +11389,32 @@ avoid using the Atmega pins</text>
 <wire x1="304.8" y1="116.84" x2="302.26" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="302.26" y1="116.84" x2="302.26" y2="114.3" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="GND" gate="G$1" pin="P"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+<wire x1="337.82" y1="76.2" x2="340.36" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="340.36" y1="76.2" x2="340.36" y2="71.12" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$9" gate="G$1" pin="GNDIN"/>
+<wire x1="373.38" y1="73.66" x2="373.38" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+<wire x1="373.38" y1="71.12" x2="375.92" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="375.92" y1="71.12" x2="375.92" y2="68.58" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="U$9" gate="G$1" pin="GNDOUT"/>
+<wire x1="391.16" y1="73.66" x2="391.16" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="GND13" gate="1" pin="GND"/>
+<wire x1="391.16" y1="71.12" x2="393.7" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="393.7" y1="71.12" x2="393.7" y2="68.58" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="INT0" class="0">
 <segment>
-<label x="396.24" y="198.12" size="1.778" layer="95"/>
+<label x="388.62" y="198.12" size="1.778" layer="95"/>
 <pinref part="SV3" gate="G$1" pin="20"/>
-<wire x1="386.08" y1="198.12" x2="403.86" y2="198.12" width="0.1524" layer="91"/>
+<wire x1="386.08" y1="198.12" x2="398.78" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="_5V" class="0">
@@ -11362,8 +11441,8 @@ avoid using the Atmega pins</text>
 <net name="INT1" class="0">
 <segment>
 <pinref part="SV3" gate="G$1" pin="18"/>
-<wire x1="386.08" y1="195.58" x2="403.86" y2="195.58" width="0.1524" layer="91"/>
-<label x="396.24" y="195.58" size="1.778" layer="95"/>
+<wire x1="386.08" y1="195.58" x2="398.78" y2="195.58" width="0.1524" layer="91"/>
+<label x="388.62" y="195.58" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="HPL" class="0">
@@ -11452,11 +11531,6 @@ avoid using the Atmega pins</text>
 <wire x1="386.08" y1="180.34" x2="393.7" y2="180.34" width="0.1524" layer="91"/>
 <label x="388.62" y="180.34" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="/INT"/>
-<wire x1="109.22" y1="172.72" x2="129.54" y2="172.72" width="0.1524" layer="91"/>
-<label x="119.38" y="172.72" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="D3" class="0">
 <segment>
@@ -11505,6 +11579,13 @@ avoid using the Atmega pins</text>
 <label x="363.22" y="185.42" size="1.778" layer="95"/>
 <label x="363.22" y="185.42" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="CS"/>
+<pinref part="R3" gate="G$1" pin="1"/>
+<wire x1="73.66" y1="203.2" x2="55.88" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="203.2" x2="55.88" y2="208.28" width="0.1524" layer="91"/>
+<label x="58.42" y="203.2" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SDA2" class="0">
 <segment>
@@ -11516,8 +11597,13 @@ avoid using the Atmega pins</text>
 <net name="AP2" class="0">
 <segment>
 <pinref part="SV3" gate="G$1" pin="13"/>
-<wire x1="370.84" y1="190.5" x2="360.68" y2="190.5" width="0.1524" layer="91"/>
-<label x="363.22" y="190.5" size="1.778" layer="95"/>
+<wire x1="370.84" y1="190.5" x2="353.06" y2="190.5" width="0.1524" layer="91"/>
+<label x="355.6" y="190.5" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="/INT"/>
+<wire x1="109.22" y1="172.72" x2="129.54" y2="172.72" width="0.1524" layer="91"/>
+<label x="119.38" y="172.72" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="P2" class="0">
@@ -11574,13 +11660,6 @@ avoid using the Atmega pins</text>
 <wire x1="370.84" y1="180.34" x2="360.68" y2="180.34" width="0.1524" layer="91"/>
 <label x="363.22" y="180.34" size="1.778" layer="95"/>
 <pinref part="SV3" gate="G$1" pin="5"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="CS"/>
-<pinref part="R3" gate="G$1" pin="1"/>
-<wire x1="73.66" y1="203.2" x2="55.88" y2="203.2" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="203.2" x2="55.88" y2="208.28" width="0.1524" layer="91"/>
-<label x="58.42" y="203.2" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="X1" class="0">
@@ -11814,6 +11893,12 @@ avoid using the Atmega pins</text>
 <wire x1="314.96" y1="218.44" x2="330.2" y2="218.44" width="0.1524" layer="91"/>
 <pinref part="SV2" gate="G$1" pin="36"/>
 <label x="320.04" y="218.44" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$9" gate="G$1" pin="VOUT"/>
+<wire x1="388.62" y1="73.66" x2="388.62" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="388.62" y1="60.96" x2="403.86" y2="60.96" width="0.1524" layer="91"/>
+<label x="396.24" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RD-" class="0">
@@ -12071,6 +12156,20 @@ avoid using the Atmega pins</text>
 <pinref part="U1" gate="G$1" pin="LEDB"/>
 <pinref part="R9" gate="G$1" pin="2"/>
 <wire x1="109.22" y1="203.2" x2="121.92" y2="203.2" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VIN" class="0">
+<segment>
+<pinref part="VIN" gate="G$1" pin="P"/>
+<wire x1="337.82" y1="83.82" x2="360.68" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="360.68" y1="83.82" x2="360.68" y2="91.44" width="0.1524" layer="91"/>
+<label x="345.44" y="83.82" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$9" gate="G$1" pin="VIN"/>
+<wire x1="370.84" y1="73.66" x2="370.84" y2="60.96" width="0.1524" layer="91"/>
+<wire x1="370.84" y1="60.96" x2="378.46" y2="60.96" width="0.1524" layer="91"/>
+<label x="373.38" y="60.96" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
