@@ -5,6 +5,14 @@
 *.b#?
 *.l#?
 
+
+**\*.b#[1-9]
+**\*.s#[1-9]
+**\*.l#[1-9]
+*.b#[1-9]
+*.s#[1-9]
+*.l#[1-9]
+
 # Eagle project file
 # It contains a serial number and references to the file structure
 # on your computer.
@@ -34,3 +42,26 @@ eagle.epf
 *.info
 
 *.eps
+
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+
+gh-pages
