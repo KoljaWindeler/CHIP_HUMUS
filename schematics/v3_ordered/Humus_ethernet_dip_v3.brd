@@ -1140,6 +1140,7 @@ HUMUS DIP </text>
 <hole x="4.6" y="47.8" drill="2"/>
 <text x="23.45" y="42.15" size="0.8128" layer="25" font="vector">HIGH 
 POWER USB</text>
+<text x="-5.8" y="33.55" size="2.1844" layer="19" rot="R270">ordered 2016/06/20</text>
 </plain>
 <libraries>
 <library name="con-lsta">
