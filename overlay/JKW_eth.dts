@@ -43,38 +43,41 @@
  */
 
 /dts-v1/;
+/plugin/;
 
 #include <dt-bindings/gpio/gpio.h>
 #include <dt-bindings/interrupt-controller/irq.h>
-
-/plugin/;
+#include <dt-bindings/pinctrl/sun4i-a10.h>
 
 / {
 	compatible = "nextthing,chip", "allwinner,sun5i-r8";
 
-	/* 
-	* activate the gpio for interrupt
-	*/
+	/* activate the gpio for interrupt */
 
 	fragment@0 {
-		target-path = <&pio>;
-
+		target = <&pio>;
+		
 		__overlay__ {
 			enc28j60_interrupt_pin: enc28j60_interrupt_pin@0 {
 				allwinner,pins = "PG1";
 				allwinner,function = "gpio_in";
+				allwinner,drive = <SUN4I_PINCTRL_10_MA>;
+				allwinner,pull = <SUN4I_PINCTRL_NO_PULL>;
 			};
 
-			spi2_pins_a: spi2@0 {
+			chip_spi2_pins: spi2@0 {
 				allwinner,pins = "PE1", "PE2", "PE3";
 				allwinner,function = "spi2";
+				allwinner,drive = <SUN4I_PINCTRL_10_MA>;
+				allwinner,pull = <SUN4I_PINCTRL_NO_PULL>;
 			};
 
-			spi2_cs0_pins_a: spi2_cs0@0 {
+			chip_spi2_cs0_pins: spi2-cs0@0 {
 				allwinner,pins = "PE0";
 				allwinner,function = "spi2";
+				allwinner,drive = <SUN4I_PINCTRL_10_MA>;
+				allwinner,pull = <SUN4I_PINCTRL_NO_PULL>;
 			};
-
 		};
 	};
 
@@ -87,18 +90,19 @@
 		target = <&spi2>;
 
 		__overlay__ {
+			pinctrl-names = "default";
+			pinctrl-0 = <&chip_spi2_pins>,
+				    <&chip_spi2_cs0_pins>;
+			status = "okay";
 			#address-cells = <1>;
 			#size-cells = <0>;
-			pinctrl-names = "default";
-			pinctrl-0 = <&spi2_cs0_pins_a>, <&spi2_pins_a>; 
-			status = "okay";
 
 			spidev@0{
 				#address-cells = <1>;
 				#size-cells = <0>;
 				compatible = "microchip,enc28j60";
-				/*	pinctrl-names = "default";		*/
-				/*	pinctrl-0 = <&enc28j60_interrupt_pin>;	*/
+				pinctrl-names = "default";
+				pinctrl-0 = <&enc28j60_interrupt_pin>;
 				reg = <0>;
 				interrupt-parent = <&pio>;
 				interrupts = <6 1 IRQ_TYPE_EDGE_FALLING>;
