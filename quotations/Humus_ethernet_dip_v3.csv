@@ -1,0 +1,14 @@
+"Qty";"Value";"Device";"Package";"Parts";"Description";"MF";"MPN";"OC_FARNELL";"OC_NEWARK";
+"10";"";"C-EUC0805";"C0805";"C1, C2, C3, C4, C5, C6, C7, C8, C9, C10";"CAPACITOR, European symbol";"";"";"";"";
+"1";"";"CRYSTALSM49";"SM49";"Q1";"CRYSTAL";"";"";"unknown";"unknown";
+"1";"";"ENC28J60";"SSOP28DB";"U1";"Microchip SPI 10Base ethernet IC";"";"";"";"";
+"2";"";"FE18-2";"FE18-2";"SV2, SV3";"FEMALE HEADER";"";"";"unknown";"unknown";
+"1";"";"FERRITE-BEADB";"0805";"FB1";"Ferrite beads in various packages";"";"";"";"";
+"8";"";"R-EU_R0805";"R0805";"R2, R4, R5, R6, R7, R8, R9, R10";"RESISTOR, European symbol";"";"";"";"";
+"1";"2K";"R-EU_R0805";"R0805";"R1";"RESISTOR, European symbol";"";"";"";"";
+"1";"DS2432P";"DS2432P";"TSOC6";"IC2";"1024-Bit Protected EEPROM with SHA-1 Engine";"";"";"";"";
+"1";"HR911105A";"HR911105A";"HR911105A";"RJ1";"";"";"";"";"";
+"1";"LOGO_10X10_SILK";"LOGO_10X10_SILK";"LOGO_10X10_SILK";"U$5";"";"";"";"";"";
+"2";"LOGO_3X3_COPPER";"LOGO_3X3_COPPER";"LOGO_3X3_COPPER";"U$2, U$4";"";"";"";"";"";
+"1";"USBUSB-MICROB-SMT-DIP";"USBUSB-MICROB-SMT-DIP";"USB-MICROB-SMT-DIP";"USB";"";"";"";"";"";
+"1";"WIREPADSMD1,27-254";"WIREPADSMD1,27-254";"SMD1,27-2,54";"PAD3";"Wire PAD connect wire on PCB";"";"";"";"";
