@@ -1,0 +1,18 @@
+"Qty";"Value";"Device";"Package";"Parts";"Description";"ASSEMBLE";"DESCRIPTION";"FOOTPRINT";"LINK";"MF";"MFG";"MFG_PN";"MPN";"OC_FARNELL";"OC_NEWARK";"PART_TYPE";"PRICE";"TOLLERANCE";"VENDOR";"VENDOR_PART_NUMBER";
+"2";"";"FE18-2";"FE18-2";"SV2, SV3";"FEMALE HEADER";"";"";"";"";"";"";"";"";"unknown";"unknown";"";"";"";"";"";
+"2";"";"R-EU_R0805";"R0805";"R2, R10";"RESISTOR, European symbol";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";
+"7";"100nF";"C-EUC0805";"C0805";"C4, C5, C6, C7, C8, C9, C10";"CAPACITOR, European symbol";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";
+"1";"10u";"C-EUC0805";"C0805";"C1";"CAPACITOR, European symbol";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";
+"2";"1k";"R-EU_R0805";"R0805";"R8, R9";"RESISTOR, European symbol";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";
+"1";"2.32K";"R-EU_R0805";"R0805";"R1";"RESISTOR, European symbol";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";
+"1";"25MHz";"CRYSTALSM49";"SM49";"Q1";"CRYSTAL";"";"";"";"";"";"";"";"";"unknown";"unknown";"";"";"";"";"";
+"4";"49.9R";"R-EU_R0805";"R0805";"R4, R5, R6, R7";"RESISTOR, European symbol";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";
+"1";"80mA ferrite bead 0805";"FERRITE-BEADB";"0805";"FB1";"Ferrite beads in various packages";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";
+"1";"DS2431P";"DS2431P";"TSOC6";"U2";"1024-Bit EEPROM";"";"IC, 1024-Bit, 1-Wire EEPROM, TSOC6";"TSOC6";"http://www.digikey.com/product-detail/en/DS2431P%2BT%26R/DS2431P%2BT%26RCT-ND/3647900";"";"DIGIKEY";"DS2431P+T&RCT-ND";"";"";"";"IC";"0.98";"";"MAXIM";"DS2431P+T&R";
+"1";"ENC28J60SS";"ENC28J60";"SSOP28DB";"U1";"Microchip SPI 10Base ethernet IC";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";
+"1";"HR911105A";"HR911105A";"HR911105A";"RJ1";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";
+"1";"LOGO_10X10_SILK";"LOGO_10X10_SILK";"LOGO_10X10_SILK";"U$5";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";
+"2";"LOGO_3X3_COPPER";"LOGO_3X3_COPPER";"LOGO_3X3_COPPER";"U$2, U$4";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";
+"1";"USBUSB-MICROB-SMT-DIP";"USBUSB-MICROB-SMT-DIP";"USB-MICROB-SMT-DIP";"USB";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";
+"1";"WIREPADSMD1,27-254";"WIREPADSMD1,27-254";"SMD1,27-2,54";"PAD3";"Wire PAD connect wire on PCB";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";
+"2";"n.a.";"C-EUC0805";"C0805";"C2, C3";"CAPACITOR, European symbol";"";"";"";"";"";"";"";"";"";"";"";"";"";"";"";
