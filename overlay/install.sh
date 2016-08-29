@@ -1,5 +1,5 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-cp $DIR"/JKW_humus.dtbo /lib/firmware/nextthingco/chip/dip-2a-3.dtbo"
+cp $DIR"/JKW_humus.dtbo" /lib/firmware/nextthingco/chip/dip-2a-3.dtbo
 echo "w1_ds2431" >> /etc/modules
 
 #write out current crontab
