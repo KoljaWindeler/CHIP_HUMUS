@@ -1,0 +1,1 @@
+python3 dip-header-generator.py HUMMUS_EEPROM.img --vid 42 --pid 1 --vendor 'JKW' --product 'Humus' --product-version 1
