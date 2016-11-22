@@ -11,7 +11,7 @@ MAC_ADDR=$(ip link show eth0 | awk '/ether/ {print $2}')
 # sed modifies (configures) the file /opt/CHIP_HUMUS/overlay/load.sh by
 # appending the $MAC_ADDR acquired  above to the null variable 
 # assignment to MAC_ADDR.
-/bin/sed -i.bak s/^MAC_ADDR=$/MAC_ADDR=$MAC_ADDR/ $DIR/load.sh
+/bin/sed -i.bak s/^MAC_ADDR=$/MAC_ADDR=$MAC_ADDR/ $DIR/load_mac.sh
 
 # Once that file has been modified (configured), it can be re-executed.
-$DIR/load.sh
+$DIR/load_mac.sh
